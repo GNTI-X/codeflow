@@ -1,0 +1,24 @@
+{
+  "name": "codeflow",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:cli": "bun run --watch packages/cli/src/index.tsx",
+    "dev:server": "bun run --hot packages/server/src/index.ts",
+    "build:cli": "bun run --filter @codeflow/cli build",
+    "link:cli": "bun run build:cli && cd packages/cli && bun link"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "description": "Codeflow is a terminal-based AI coding agent that lives inside your local project. Use read-only planning tools to analyze code, or enable write, edit, and shell execution tools fo...",
+  "author": "Galaxy Nova Technologies & Innovations (GNTI) <https://gnti.tech>",
+  "homepage": "https://gnti.tech/projects/codeflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GNTI-X/codeflow.git"
+  },
+  "license": "MIT"
+}
